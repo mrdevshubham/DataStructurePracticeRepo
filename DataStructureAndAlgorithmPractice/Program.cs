@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 
 namespace DataStructureAndAlgorithmPractice
 {
@@ -10,8 +11,8 @@ namespace DataStructureAndAlgorithmPractice
             //PairsSumToTarget();
             //MergeTheSortedArrays();
             //TwoSumIndicesProblem();
-            FindMaximumSubArray();
-
+            //FindMaximumSubArray();
+            MoveZeroProblem();
 
 
 
@@ -44,6 +45,27 @@ namespace DataStructureAndAlgorithmPractice
             int[] arr = new int[] {-2, -1};
             MaximumSubArrayProblem omaxsubarray = new MaximumSubArrayProblem();
             omaxsubarray.FindMeximumSubArray(arr);
+        }
+
+        private static void MoveZeroProblem()
+        {
+            //int[] arr = new int[] { 12, 0, 0, 0, 0, 12 };
+            //int[] arr = new int[] { 0, 0, 0, 0, 0, 12 };
+            //int[] arr = new int[] { 0, 1, 0, 0, 3, 12 };
+            //int[] arr = new int[] {0, 12, 0,0,3,5,0, 1, 0, 3, 12,0 };
+            //int[] arr = new int[] { 0, 12, 0, 0, 12, 0 };
+            //int[] arr = new int[] { 0, 0 };
+            //int[] arr = new int[] { 1, 1 };
+            //int[] arr = new int[] { 0, 1 };
+            //int[] arr = new int[] { 1, 0 };
+            //int[] arr = new int[] { 1 };
+            //int[] arr = new int[] { 0 };
+            Console.WriteLine("Please provide input");
+            string inputs = Console.ReadLine();
+            var splittedArray = inputs.Split(',').Select(x => Convert.ToInt32(x.Trim())).ToList();
+
+            MoveZerosProblem oMoveZero = new MoveZerosProblem();
+            var Result = oMoveZero.MoveZerosToEnd(splittedArray.ToArray());
         }
     }
 }
