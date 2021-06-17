@@ -12,8 +12,8 @@ namespace DataStructureAndAlgorithmPractice
             //MergeTheSortedArrays();
             //TwoSumIndicesProblem();
             //FindMaximumSubArray();
-            MoveZeroProblem();
-
+            //MoveZeroProblem();
+            ContainsDuplicateElements();
 
 
         }
@@ -66,6 +66,14 @@ namespace DataStructureAndAlgorithmPractice
 
             MoveZerosProblem oMoveZero = new MoveZerosProblem();
             var Result = oMoveZero.MoveZerosToEnd(splittedArray.ToArray());
+        }
+
+        private static void ContainsDuplicateElements()
+        {
+            //int[] arr = new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
+            int[] arr = new int[] { 1, 2,3,4};
+            ContainsDuplicateProblem ocontainsDuplicate = new ContainsDuplicateProblem();
+            ocontainsDuplicate.ContainsDuplicateElements(arr);
         }
     }
 }
