@@ -13,8 +13,8 @@ namespace DataStructureAndAlgorithmPractice
             //TwoSumIndicesProblem();
             //FindMaximumSubArray();
             //MoveZeroProblem();
-            ContainsDuplicateElements();
-
+            //ContainsDuplicateElements();
+            RotateArrayByK();
 
         }
         
@@ -74,6 +74,19 @@ namespace DataStructureAndAlgorithmPractice
             int[] arr = new int[] { 1, 2,3,4};
             ContainsDuplicateProblem ocontainsDuplicate = new ContainsDuplicateProblem();
             ocontainsDuplicate.ContainsDuplicateElements(arr);
+        }
+
+        private static void RotateArrayByK()
+        {
+            int[] arr = new int[] { 1, 2, 3 };
+            int k = 7;
+            //int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            //int k = 3;
+            //int[] arr = new int[] { -1, -100, 3, 99 };
+            //int k = 2;
+            RotateArrayByK oRotateArrayByK = new RotateArrayByK();
+            var Result = oRotateArrayByK.RotateArrayBykFromLast(arr, k);
+            Console.ReadLine();
         }
     }
 }
