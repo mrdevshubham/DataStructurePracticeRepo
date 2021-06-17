@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DataStructureAndAlgorithmPractice
@@ -63,6 +64,20 @@ namespace DataStructureAndAlgorithmPractice
             }
 
             return uniqueElements;
+        }
+
+        private bool ContainsDuplicateElementsThree(int[] nums) // Better than Second Approch
+        {
+            HashSet<int> dupes = new HashSet<int>();
+            foreach (int i in nums)
+            {
+                if (dupes.Contains(i))
+                {
+                    return true;
+                }
+                dupes.Add(i);
+            }
+            return false;
         }
     }
 }
